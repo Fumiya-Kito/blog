@@ -2,7 +2,7 @@
 export interface Props {
 	title: string;
 	body: string;
-	href: string;
+	href?: string;
 }
 
 const { href, title, body } = Astro.props;
@@ -12,13 +12,14 @@ const { href, title, body } = Astro.props;
 	<a href={href}>
 		<h2>
 			{title}
-			<span>&rarr;</span>
+			<!-- <span>&rarr;</span> -->
 		</h2>
 		<p>
 			{body}
 		</p>
 	</a>
 </li>
+
 <style>
 	.link-card {
 		list-style: none;
